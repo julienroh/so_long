@@ -154,6 +154,4 @@ so_long/
 
 **Julien Roh**
 
-Computer Science student at 42 Lausanne.
-
 [GitHub Profile](https://github.com/julienroh)
