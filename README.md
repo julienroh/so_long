@@ -1,166 +1,116 @@
-so_long
+# so_long
 
 A 2D game project developed in C as part of the 42 School curriculum.
 
-📖 About
+## 📖 About
 
-so_long is a 2D game in which the player navigates through a map, collects all collectibles, and reaches the exit.
+**so_long** is a 2D game in which the player navigates through a map, collects all collectibles, and reaches the exit.
 
 The project introduces graphical programming, event handling, map parsing, path validation, and memory management in C using the MiniLibX graphics library.
 
-🎯 Objectives
+## 🎯 Objectives
 
-Create a simple 2D game using MiniLibX.
+- Create a simple 2D game using MiniLibX.
+- Parse and validate maps stored in `.ber` files.
+- Handle keyboard input and player movement.
+- Collect every collectible before reaching the exit.
+- Validate map accessibility and detect invalid configurations.
+- Manage memory and graphical resources correctly.
 
-Parse and validate maps stored in .ber files.
+## 🎮 Gameplay Elements
 
-Handle keyboard input and player movement.
+| Element | Description |
+| ------- | ----------- |
+| `1` | Wall — blocks the player's movement |
+| `0` | Empty space — a walkable tile |
+| `P` | Player — starting position |
+| `C` | Collectible — must be collected |
+| `E` | Exit — reachable after collecting all collectibles |
 
-Collect every collectible before reaching the exit.
+## 🛠️ Technologies
 
-Validate map accessibility and detect invalid configurations.
+- **Language:** C
+- **Graphics library:** MiniLibX
+- **Build system:** Make
+- **Environment:** Unix / Linux
+- **Libraries:** `libft` and `ft_printf`
 
-Manage memory and graphical resources correctly.
+## 🚀 Getting Started
 
-🎮 Gameplay Elements
+### Prerequisites
 
-Element
+You need a C compiler, `make`, and the dependencies required by MiniLibX for your system.
 
-Description
-
-1
-
-Wall — blocks the player's movement
-
-0
-
-Empty space — a walkable tile
-
-P
-
-Player — starting position
-
-C
-
-Collectible — must be collected
-
-E
-
-Exit — reachable after collecting all collectibles
-
-🛠️ Technologies
-
-Language: C
-
-Graphics library: MiniLibX
-
-Build system: Make
-
-Environment: Unix / Linux
-
-Libraries: libft and ft_printf
-
-🚀 Getting Started
-
-Prerequisites
-
-You need a C compiler, make, and the dependencies required by MiniLibX for your system.
-
-Compilation
+### Compilation
 
 Clone the repository and enter the project directory:
 
+```bash
 git clone https://github.com/julienroh/so_long.git
 cd so_long
+```
 
 Compile the project:
 
+```bash
 make
+```
 
-This should generate the so_long executable.
+This should generate the `so_long` executable.
 
-Usage
+### Usage
 
 Run the game with a valid map file:
 
+```bash
 ./so_long map/map.ber
+```
 
-You can use another .ber map by replacing map/map.ber with its path.
+You can use another `.ber` map by replacing `map/map.ber` with its path.
 
-Example Map
+### Example Map
 
+```text
 111111
 1P0C01
 100001
 1C0E01
 111111
+```
 
 A valid map must follow the project's validation rules:
 
-The map must be rectangular.
+- The map must be rectangular.
+- The map must be surrounded by walls.
+- It must contain exactly one player.
+- It must contain at least one collectible.
+- It must contain exactly one exit.
+- All collectibles and the exit must be reachable by the player.
 
-The map must be surrounded by walls.
+### Controls
 
-It must contain exactly one player.
+| Key | Action |
+| --- | ------ |
+| `W` / `↑` | Move up |
+| `A` / `←` | Move left |
+| `S` / `↓` | Move down |
+| `D` / `→` | Move right |
+| `ESC` | Close the game |
 
-It must contain at least one collectible.
+*Adjust these controls if your implementation uses different keys.*
 
-It must contain exactly one exit.
+## 🧹 Available Make Commands
 
-All collectibles and the exit must be reachable by the player.
+| Command | Description |
+| ------- | ----------- |
+| `make` | Compile the project |
+| `make clean` | Remove object files |
+| `make fclean` | Remove object files and generated build outputs |
+| `make re` | Rebuild the project from scratch |
 
-Controls
+## 📁 Project Structure
 
-Key
-
-Action
-
-W / ↑
-
-Move up
-
-A / ←
-
-Move left
-
-S / ↓
-
-Move down
-
-D / →
-
-Move right
-
-ESC
-
-Close the game
-
-Adjust these controls if your implementation uses different keys.
-
-🧹 Available Make Commands
-
-Command
-
-Description
-
-make
-
-Compile the project
-
-make clean
-
-Remove object files
-
-make fclean
-
-Remove object files and generated build outputs
-
-make re
-
-Rebuild the project from scratch
-
-📁 Project Structure
-
+```text
 so_long/
 ├── includes/
 │   └── so_long.h
@@ -189,25 +139,21 @@ so_long/
 │   └── w.xpm
 ├── Makefile
 └── README.md
+```
 
-🧠 Skills Developed
+## 🧠 Skills Developed
 
-C programming and memory management
+- C programming and memory management
+- Graphical programming with MiniLibX
+- Map parsing and validation
+- Event handling and keyboard input
+- Path validation and algorithmic reasoning
+- Compilation and project organization with Make
 
-Graphical programming with MiniLibX
+## 👤 Author
 
-Map parsing and validation
-
-Event handling and keyboard input
-
-Path validation and algorithmic reasoning
-
-Compilation and project organization with Make
-
-👤 Author
-
-Julien Roh
+**Julien Roh**
 
 Computer Science student at 42 Lausanne.
 
-GitHub Profile
+[GitHub Profile](https://github.com/julienroh)
